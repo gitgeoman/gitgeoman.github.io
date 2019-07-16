@@ -1,0 +1,70 @@
+
+body{
+	margin:0px;
+	font-size: 1em;
+	text-align: justify;
+
+}
+.container{
+	margin:auto;
+	margin-top:5px;
+}
+.col {
+	background-color: white;
+	border:1px solid black ;
+	color:black;
+}
+#logo{
+	width: 90vw;
+	height: 5vh;
+	min-height: 50px;
+}
+#navbar{
+	width: 90vw;
+	height: 10vh;
+	min-height: 100px;
+}
+#mymap{
+	width: 100vw;
+	height: 80vh;
+	min-height: 75px;
+}
+#oferty{
+	width: 100vw;
+	overflow: auto;
+	height: 80vh;
+}
+
+.col[id^='oferta']
+{
+
+	width: 100vw;
+	height: 15vh;
+	padding: 5px;
+	margin-bottom: 5px;
+	overflow: hidden;
+	min-height: 75px;
+}
+.col[id^='oferta']:hover{
+	background-color: #d6e6ff; 
+}
+#tekst{
+	margin:10px;
+	padding:15px;
+}
+img{
+	height: 64px;
+	width: auto;
+	float:left;
+}
+
+@keyframes fade { 
+  	from{ opacity:0.5; }
+}
+
+.blinking {
+  animation: fade 0.3s infinite alternate;
+
+}
+
+
