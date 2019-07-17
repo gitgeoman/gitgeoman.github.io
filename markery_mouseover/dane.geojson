@@ -22,7 +22,7 @@ var geojsonFeature={
             "popupAnchor": [-3, -76],
             "shadowUrl": 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
             "shadowSize":  [50, 64],
-            "shadowAnchor": [40, 0]
+            "shadowAnchor": [4, 62]
           }
       },
       "geometry": {
@@ -150,7 +150,7 @@ var geojsonFeature={
             "popupAnchor": [-3, -76],
             "shadowUrl": 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
             "shadowSize":  [50, 64],
-            "shadowAnchor": [100, 62]
+            "shadowAnchor": [4, 62]
           }
       },
       "geometry": {
@@ -182,33 +182,33 @@ var geojsonFeature={
             "popupAnchor": [-3, -76],
             "shadowUrl": 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
             "shadowSize":  [50, 64],
-            "shadowAnchor": [40, 0]
+            "shadowAnchor": [4, 62]
           }
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.016845703125,
-          52.29756190868707
+          21.3136845703125,
+          52.39356190868707
         ]
       }
     },
-    {
+        {
       "type": "Feature",
-            "properties": {
-        "id": 7,
-        "description": "Treść Opisu 7 ",
-        "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
-        "symbol_circle": {
-          "radius": 8,
-          "fillColor": "#ff7800",
-          "color": "#000",
-          "weight": 1,
-          "opacity": 1,
-          "fillOpacity": 0.8
-        },
+        "properties": {
+          "id": 7,
+          "description": "Treść Opisu 7 ",
+          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
+          "symbol_circle": {
+            "radius": 8,
+            "fillColor": "#42f5a7",
+            "color": "#42f5a7",
+            "weight": 1,
+            "opacity": 1,
+            "fillOpacity": 0.8
+          },
           "symbol_sign": {
-            "iconUrl": 'https://leafletjs.com/examples/custom-icons/leaf-red.png',
+            "iconUrl": 'https://leafletjs.com/examples/custom-icons/leaf-orange.png',
             "iconSize":    [38, 95],
             "iconAnchor":  [22, 94],
             "popupAnchor": [-3, -76],
@@ -220,15 +220,15 @@ var geojsonFeature={
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.012725830078125,
-          52.387334799335875
+          21.316845703125,
+          52.2156190868707
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "id": 9,
+        "id": 8,
         "description": "Treść Opisu 8 ",
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
@@ -252,7 +252,7 @@ var geojsonFeature={
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.108856201171875,
+          21.178856201171875,
           52.338695481504814
         ]
       }

@@ -34,27 +34,40 @@ $(document).ready(function () {
 
     //dodaje skale
     L.control.scale({position:'bottomright', imperial:false, maxWidth:200}).addTo(mymap);
-    
-    function znak(numer_obiektu){
-		var smallIcon = new L.Icon({
-		    iconUrl: geojsonFeature.features[numer_obiektu].properties.symbol_sign.iconUrl,
-		    iconRetinaUrl: geojsonFeature.features[numer_obiektu].properties.symbol_sign.iconRetinaUrl,
-		    iconSize:    geojsonFeature.features[numer_obiektu].properties.symbol_sign.iconSize,
-		    iconAnchor:  geojsonFeature.features[numer_obiektu].properties.symbol_sign.iconAnchor,
-		    popupAnchor: geojsonFeature.features[numer_obiektu].properties.symbol_sign.popupAnchor,
-		    shadowUrl: geojsonFeature.features[numer_obiektu].properties.symbol_sign.shadowUrl,
-		    shadowSize:  geojsonFeature.features[numer_obiektu].properties.symbol_sign.shadowSize,
-		    className: "blinking"
-		  });
-
-    	return smallIcon;
-    };
 
 
-	var myLayer = L.geoJSON(geojsonFeature, 
+    //dodaję własnego markera
+    var marker;
+ 	var myLayer = L.geoJSON(geojsonFeature, 
 		{
 			pointToLayer: function (feature, latlng){
-				return L.marker(latlng, {icon:L.icon({
+				marker = L.marker(latlng, {icon:L.icon({
+												iconUrl: feature.properties.symbol_sign.iconUrl,
+											    iconRetinaUrl: feature.properties.symbol_sign.iconRetinaUrl,
+											    iconSize:    feature.properties.symbol_sign.iconSize,
+											    iconAnchor:  feature.properties.symbol_sign.iconAnchor,
+											    popupAnchor: feature.properties.symbol_sign.popupAnchor,
+												shadowUrl: feature.properties.symbol_sign.shadowUrl,
+											    shadowSize:  feature.properties.symbol_sign.shadowSize,
+											    shadowAnchor:  feature.properties.symbol_sign.shadowAnchor,
+											    opacity: 1,
+												})
+											}
+									);
+				marker.setOpacity(0.6);
+				return marker;
+			}
+		}
+		).addTo(mymap);
+ 	//koniec dodawanie markerów
+
+ 	 $( ".col[id^='oferta']" ).mouseover(function() {
+ 	 		var str=parseInt(this.id[7]);
+    		marker = L.geoJSON(geojsonFeature.features[str], {
+		 		pointToLayer: function (feature, latlng) 
+		 		{
+		 			//wstawia marker w postaci okręgu
+		 			return L.marker(latlng, {icon:L.icon({
 												iconUrl: feature.properties.symbol_sign.iconUrl,
 											    iconRetinaUrl: feature.properties.symbol_sign.iconRetinaUrl,
 											    iconSize:    feature.properties.symbol_sign.iconSize,
@@ -63,48 +76,25 @@ $(document).ready(function () {
 											    shadowUrl: feature.properties.symbol_sign.shadowUrl,
 											    shadowSize:  feature.properties.symbol_sign.shadowSize,
 											    shadowAnchor:  feature.properties.symbol_sign.shadowAnchor,
-
+											    opacity: 1,
+											    className: 'pulse'
 				})});
-			}
-		}
-		).addTo(mymap);
-	
-	//myLayer.addData();
-
-    var marker;
-    $( ".col[id^='oferta']" ).mouseover(function() {
-    		//alert( "Handler for .click() called." );
-
-    		var str=parseInt(this.id[7]);
-    		str=str;
-
-		 	marker = L.geoJSON(geojsonFeature.features[str], {
-		 		pointToLayer: function (feature, latlng) 
-		 		{
-
-		 			//wstawia marker w postaci okręgu
-		 			//return L.circleMarker(latlng, geojsonFeature.features[str].properties.symbol_circle);
-		 			//wstawia własne ikony w miejscu gdzie jest obiekt
-		 			return L.marker(latlng, {icon:znak(str)});
     			}
-    			}
+    		}
     		).addTo(mymap);
 
-    		//var dzisiaj = new Date();
-		 	marker.bindPopup(/*dzisiaj.getFullYear()
+    		var dzisiaj = new Date();
+		 	marker.bindPopup(dzisiaj.getFullYear()
 		 						+ "." +dzisiaj.getMonth()
 		 						+ "." + dzisiaj.getDate() 
 		 						+ " - " + dzisiaj.getHours() 
 		 						+ ":" + dzisiaj.getMinutes() 
 		 						+ ":" + dzisiaj.getSeconds()+"<br>"
-		 								+*/
-		 						geojsonFeature.features[str].properties.description+", <br>").openPopup();
-		 	
-		});
+		 						+geojsonFeature.features[str].properties.description+", <br>").openPopup();
+		 			});
     $( ".col[id^='oferta']" ).mouseout(function() {
 		 	//alert( "Handler for .click() called." );
 		 	marker.closePopup();
 		 	mymap.removeLayer(marker)
 		});
- 
 });

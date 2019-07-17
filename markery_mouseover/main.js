@@ -51,33 +51,9 @@ $(document).ready(function () {
     };
 
 
-	var myLayer = L.geoJSON(geojsonFeature, 
-		{
-			pointToLayer: function (feature, latlng){
-				return L.marker(latlng, {icon:L.icon({
-												iconUrl: feature.properties.symbol_sign.iconUrl,
-											    iconRetinaUrl: feature.properties.symbol_sign.iconRetinaUrl,
-											    iconSize:    feature.properties.symbol_sign.iconSize,
-											    iconAnchor:  feature.properties.symbol_sign.iconAnchor,
-											    popupAnchor: feature.properties.symbol_sign.popupAnchor,
-											    shadowUrl: feature.properties.symbol_sign.shadowUrl,
-											    shadowSize:  feature.properties.symbol_sign.shadowSize,
-											    shadowAnchor:  feature.properties.symbol_sign.shadowAnchor,
-
-				})});
-			}
-		}
-		).addTo(mymap);
-	
-	//myLayer.addData();
-
     var marker;
     $( ".col[id^='oferta']" ).mouseover(function() {
-    		//alert( "Handler for .click() called." );
-
     		var str=parseInt(this.id[7]);
-    		str=str;
-
 		 	marker = L.geoJSON(geojsonFeature.features[str], {
 		 		pointToLayer: function (feature, latlng) 
 		 		{

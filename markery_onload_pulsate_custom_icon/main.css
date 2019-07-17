@@ -1,0 +1,100 @@
+
+body{
+	margin:0px;
+	font-size: 1em;
+	text-align: justify;
+	padding: 0px;
+}
+.container{
+
+	margin:0px;
+	margin-top:5px;
+     padding-right: 0; /*15px in bootstrap.css*/
+     padding-left: 0;  /*idem*/
+     margin-right: auto;
+     margin-left: auto;
+}
+.row{
+	
+	margin:0px;
+}
+.col {
+	background-color: white;
+	color:grey;
+}
+#logo{
+	
+	text-align: center;
+	min-height: 50px;
+	display: inline-block;
+
+}
+
+#mymap{
+
+	height: 80vh;
+	min-height: 75px;
+}
+#oferty{
+
+	overflow: auto;
+	height: 80vh;
+
+}
+
+.col[id^='oferta']
+{
+
+	padding: 5px;
+	margin-bottom: 5px;
+	margin-top:5px;
+	overflow: hidden;
+	min-height: 75px;
+	background-color: #e9dbff;
+	border-radius: 7px 7px 7px 7px;
+	-moz-border-radius: 7px 7px 7px 7px;
+	-webkit-border-radius: 7px 7px 7px 7px;
+	-webkit-box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
+	-moz-box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
+	box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
+}
+.col[id^='oferta']:hover{
+	background-color: #d6e6ff; 
+}
+#tekst{
+	margin:10px;
+	padding:15px;
+}
+img{
+	height: 60px;
+
+	float:left;
+	margin:15px;
+}
+
+@keyframes fade { 
+  	from{ opacity:0.5; }
+}
+
+.blinking {
+  animation: fade 0.3s infinite alternate;
+
+}
+
+
+
+
+/*efekt pulsowania*/
+.pulse {
+    animation: pulsate 1s ease-out;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+
+
+@keyframes pulsate {
+    0% {transform: opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {transform: opacity: 0.0;}
+}
