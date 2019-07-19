@@ -1,7 +1,7 @@
 
 body{
 	margin:0px;
-	font-size: 1em;
+	font-size: 13px;
 	text-align: justify;
 	padding: 0px;
 }
@@ -27,7 +27,6 @@ body{
 	text-align: center;
 	min-height: 50px;
 	display: inline-block;
-
 }
 
 #mymap{
@@ -39,12 +38,9 @@ body{
 
 	overflow: auto;
 	height: 80vh;
-
 }
 
-.col[id^='oferta']
-{
-
+.col[id^='oferta'] {
 	padding: 5px;
 	margin-bottom: 5px;
 	margin-top:5px;
@@ -58,16 +54,25 @@ body{
 	-moz-box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
 	box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
 }
+
 .col[id^='oferta']:hover{
 	background-color: #d6e6ff; 
 }
-#tekst{
-	margin:10px;
-	padding:15px;
+
+[id^='tekst']{
+	font-size: 13px;
 }
+
+
+
+[id^='tekst'] h3{
+	font-size: 16px;
+}
+
+
 img{
 	height: 60px;
-
+	
 	float:left;
 	margin:15px;
 }
@@ -80,9 +85,6 @@ img{
   animation: fade 0.3s infinite alternate;
 
 }
-
-
-
 
 /*efekt pulsowania*/
 .pulse {
@@ -98,3 +100,5 @@ img{
     50% {opacity: 1.0;}
     100% {transform: opacity: 0.0;}
 }
+
+

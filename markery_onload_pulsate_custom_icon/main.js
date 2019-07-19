@@ -1,12 +1,19 @@
 $(document).ready(function () {
-	//pętla do tworzenia listy ofert				
+	//pętla do tworzenia listy ofert		
+
+
 	for (var licznik in geojsonFeature.features){
 		$('#oferty')
 		.append('<div id="oferta '+licznik+'" class="col">'
 						+'<img src='
 							+geojsonFeature.features[licznik].properties.miniaturka+' alt="...">'
-						+'<div id="tekst '+licznik+'">'
-							+geojsonFeature.features[licznik].properties.description
+						+'<div id="tekst '+licznik+'"><h3>'
+							+geojsonFeature.features[licznik].properties.description.trescNaglowka
+						+'</h3></p>'
+							+geojsonFeature.features[licznik].properties.description.trescOgloszenia
+						+'</p>' 
+							+geojsonFeature.features[licznik].properties.description.wartosc1
+							+geojsonFeature.features[licznik].properties.description.wartosc2
 						+'</div>'
 				+'</div>'
 		)
@@ -90,7 +97,8 @@ $(document).ready(function () {
 		 						+ " - " + dzisiaj.getHours() 
 		 						+ ":" + dzisiaj.getMinutes() 
 		 						+ ":" + dzisiaj.getSeconds()+"<br>"
-		 						+geojsonFeature.features[str].properties.description+", <br>").openPopup();
+		 						+'<strong>'+geojsonFeature.features[str].properties.description.trescNaglowka+'</strong>"<br>"'
+		 						+geojsonFeature.features[str].properties.description.trescOgloszenia+"<br>").openPopup();
 		 			});
     $( ".col[id^='oferta']" ).mouseout(function() {
 		 	//alert( "Handler for .click() called." );

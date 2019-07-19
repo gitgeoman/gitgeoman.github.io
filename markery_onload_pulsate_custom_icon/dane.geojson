@@ -5,7 +5,12 @@ var geojsonFeature={
       "type": "Feature",
         "properties": {
           "id": 1,
-          "description": "Treść Opisu 1 ",
+          "description": {
+          		"trescNaglowka" : "Tresc Naglowka 1",
+          		"trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+          		"wartosc1" : "Tresc 1",
+          		"wartosc2" : "Tresc 2",
+          		},
           "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
             "symbol_circle": {
             "radius": 8,
@@ -37,7 +42,12 @@ var geojsonFeature={
       "type": "Feature",
             "properties": {
         "id": 2,
-        "description": "Treść Opisu 2 ",
+         "description": {
+              "trescNaglowka" : "Tresc Naglowka 2",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -69,7 +79,12 @@ var geojsonFeature={
       "type": "Feature",
       "properties": {
         "id": 3,
-        "description": "Treść Opisu 3 ",
+         "description": {
+              "trescNaglowka" : "Tresc Naglowka 3",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -101,7 +116,12 @@ var geojsonFeature={
       "type": "Feature",
             "properties": {
         "id": 4,
-        "description": "Treść Opisu 4 ",
+         "description": {
+              "trescNaglowka" : "Tresc Naglowka 4",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -133,7 +153,12 @@ var geojsonFeature={
       "type": "Feature",
            "properties": {
         "id": 5,
-        "description": "Treść Opisu 5 ",
+         "description": {
+              "trescNaglowka" : "Tresc Naglowka 5",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -165,7 +190,12 @@ var geojsonFeature={
       "type": "Feature",
         "properties": {
           "id": 6,
-          "description": "Treść Opisu 6 ",
+           "description": {
+              "trescNaglowka" : "Tresc Naglowka 6",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
           "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
           "symbol_circle": {
             "radius": 8,
@@ -197,7 +227,12 @@ var geojsonFeature={
       "type": "Feature",
         "properties": {
           "id": 7,
-          "description": "Treść Opisu 7 ",
+           "description": {
+              "trescNaglowka" : "Tresc Naglowka 7",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
           "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
           "symbol_circle": {
             "radius": 8,
@@ -229,7 +264,12 @@ var geojsonFeature={
       "type": "Feature",
       "properties": {
         "id": 8,
-        "description": "Treść Opisu 8 ",
+         "description": {
+              "trescNaglowka" : "Tresc Naglowka 8",
+              "trescOgloszenia" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. ",
+              "wartosc1" : "Tresc 1",
+              "wartosc2" : "Tresc 2",
+              },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,

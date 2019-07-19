@@ -44,7 +44,7 @@ $(document).ready(function () {
 		    popupAnchor: geojsonFeature.features[numer_obiektu].properties.symbol_sign.popupAnchor,
 		    shadowUrl: geojsonFeature.features[numer_obiektu].properties.symbol_sign.shadowUrl,
 		    shadowSize:  geojsonFeature.features[numer_obiektu].properties.symbol_sign.shadowSize,
-		    className: "blinking"
+		    //className: "blinking"
 		  });
 
     	return smallIcon;
