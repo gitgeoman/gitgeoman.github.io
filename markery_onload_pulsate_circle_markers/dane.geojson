@@ -4,40 +4,47 @@ var geojsonFeature={
     {
       "type": "Feature",
         "properties": {
-          "id": 1,
-          "description": "Treść Opisu 1 ",
-          "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
-            "symbol_circle": {
-            "radius": 8,
-            "fillColor": "#42f5a7",
-            "color": "#42f5a7",
-            "weight": 1,
-            "opacity": 1,
-            "fillOpacity": 0.8
-          },
-          "symbol_sign": {
-            "iconUrl": 'https://leafletjs.com/examples/custom-icons/leaf-orange.png',
-            "iconSize":    [38, 95],
-            "iconAnchor":  [22, 94],
-            "popupAnchor": [-3, -76],
-            "shadowUrl": 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
-            "shadowSize":  [50, 64],
-            "shadowAnchor": [4, 62]
-          }
-      },
+                      "id": 1,
+                      "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
+                                    
+                      "miniaturka" : "https://robohash.org/amount=25",
+                        "symbol_circle": {
+                                            "radius": 8,
+                                            "fillColor": "#42f5a7",
+                                            "color": "#42f5a7",
+                                            "weight": 1,
+                                            "opacity": 1,
+                                            "fillOpacity": 0.8
+                                         },
+                      "symbol_sign": {
+                                      "iconUrl": 'https://leafletjs.com/examples/custom-icons/leaf-orange.png',
+                                      "iconSize":    [38, 95],
+                                      "iconAnchor":  [22, 94],
+                                      "popupAnchor": [-3, -76],
+                                      "shadowUrl": 'https://leafletjs.com/examples/custom-icons/leaf-shadow.png',
+                                      "shadowSize":  [50, 64],
+                                      "shadowAnchor": [4, 62]
+                                    }
+                      },
       "geometry": {
-        "type": "Point",
-        "coordinates": [
-          21.016845703125,
-          52.29756190868707
-        ]
-      }
+                    "type": "Point",
+                    "coordinates": [
+                                      21.016845703125,
+                                      52.29756190868707
+                                    ]
+                  }
     },
     {
       "type": "Feature",
             "properties": {
         "id": 2,
-        "description": "Treść Opisu 2 ",
+         "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -69,7 +76,10 @@ var geojsonFeature={
       "type": "Feature",
       "properties": {
         "id": 3,
-        "description": "Treść Opisu 3 ",
+         "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -101,7 +111,10 @@ var geojsonFeature={
       "type": "Feature",
             "properties": {
         "id": 4,
-        "description": "Treść Opisu 4 ",
+        "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -133,7 +146,10 @@ var geojsonFeature={
       "type": "Feature",
            "properties": {
         "id": 5,
-        "description": "Treść Opisu 5 ",
+        "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,
@@ -165,7 +181,10 @@ var geojsonFeature={
       "type": "Feature",
         "properties": {
           "id": 6,
-          "description": "Treść Opisu 6 ",
+           "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
           "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
           "symbol_circle": {
             "radius": 8,
@@ -197,7 +216,10 @@ var geojsonFeature={
       "type": "Feature",
         "properties": {
           "id": 7,
-          "description": "Treść Opisu 7 ",
+           "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
           "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
           "symbol_circle": {
             "radius": 8,
@@ -229,7 +251,10 @@ var geojsonFeature={
       "type": "Feature",
       "properties": {
         "id": 8,
-        "description": "Treść Opisu 8 ",
+         "description": {
+                                    "name":"Nazwa obiektu",
+                                    "specification":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 1 "
+                                    },
         "miniaturka" : "http://pngimg.com/uploads/globe/globe_PNG62.png",
         "symbol_circle": {
           "radius": 8,

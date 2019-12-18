@@ -1,16 +1,17 @@
 $(document).ready(function () {
-	//pętla do tworzenia listy ofert				
-	for (var licznik in geojsonFeature.features){
-		$('#oferty')
-		.append('<div id="oferta '+licznik+'" class="col">'
-						+'<img src='
-							+geojsonFeature.features[licznik].properties.miniaturka+' alt="...">'
-						+'<div id="tekst '+licznik+'">'
-							+geojsonFeature.features[licznik].properties.description
-						+'</div>'
-				+'</div>'
-		)
-	};				
+	//pętla do tworzenia listy ofert		
+			geojsonFeature.features.forEach((item,iterator)=> {console.log(iterator)
+				$('#oferty').append(
+							`<div id="oferta ${iterator}" class="col">
+								<img src="https://robohash.org/${iterator}" alt="...">
+								<div id="tekst ${iterator}">
+									<h4>${item.properties.description.name}</h4><br/>
+										${item.properties.description.specification}
+								</div>
+							</div>`
+					);
+			})
+	
   //wczytywanie mapy
 
     //deklaracja map podkładowych
@@ -35,45 +36,47 @@ $(document).ready(function () {
     //dodaje skale
     L.control.scale({position:'bottomright', imperial:false, maxWidth:200}).addTo(mymap);
     
+
+    //dodaje dane do okna mapy z pliku geojson
  	var myLayer = L.geoJSON(geojsonFeature, 
 		{
 			pointToLayer: function (feature, latlng){
 				return L.circleMarker(latlng, feature.properties.symbol_circle);
-
 			}
 		}
 		).addTo(mymap);
 
 	//pulsujące markery
- 	 $( ".col[id^='oferta']" ).mouseover(function() {
-    		var str=parseInt(this.id[7]);
-    		marker = L.geoJSON(geojsonFeature.features[str], {
-		 		pointToLayer: function (feature, latlng) 
-		 		{
-		 			//wstawia marker w postaci okręgu
-		 			return L.circleMarker(latlng, {
-							    color: 'red',
-							    fillColor: '#f03',
-							    fillOpacity: 0.5,
-							    radius: 10,
-							    className:'pulse'
-					});
-    			}
-    		}
-    		).addTo(mymap);
-    //treść popup
-    		var dzisiaj = new Date();
-		 	marker.bindPopup(dzisiaj.getFullYear()
-		 						+ "." +dzisiaj.getMonth()
-		 						+ "." + dzisiaj.getDate() 
-		 						+ " - " + dzisiaj.getHours() 
-		 						+ ":" + dzisiaj.getMinutes() 
-		 						+ ":" + dzisiaj.getSeconds()+"<br>"
-		 						+geojsonFeature.features[str].properties.description+", <br>").openPopup();
-		 			});
-    $( ".col[id^='oferta']" ).mouseout(function() {
-		 	
+ 	 $( ".col[id^='oferta']")
+ 	 	.mouseover(function() {
+			var str=Number(this.id[7]); //pokazuje 8 znak
+			marker = L.geoJSON(geojsonFeature.features[str], {
+				pointToLayer: function (feature, latlng) 
+					{//wstawia marker w postaci okręgu
+					 	return L.circleMarker(latlng, {
+					 		color: 'red',
+							fillColor: '#f03',
+							fillOpacity: 0.5,
+							radius: 10,
+							className:'pulse'
+							}
+						);
+			    	}
+			}
+			).addTo(mymap);
+			    //treść popup
+		var dzisiaj = new Date();
+		marker
+			.bindPopup(`
+				${dzisiaj.getFullYear()}-${dzisiaj.getMonth()}-${dzisiaj.getDate()}
+				${dzisiaj.getHours()}:${dzisiaj.getMinutes()}:${dzisiaj.getSeconds()} <br/>
+				<h5>${geojsonFeature.features[str].properties.description.name}</h5>
+				${geojsonFeature.features[str].properties.description.specification}
+			`)
+			.openPopup();
+	})
+ 	 	.mouseout(function(){
 		 	marker.closePopup();
-		 	mymap.removeLayer(marker)
+		 	mymap.removeLayer(marker) //usuwa ostatniego markera z mapy
 		});
 });
