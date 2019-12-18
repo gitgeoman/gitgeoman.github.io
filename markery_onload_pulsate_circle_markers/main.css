@@ -21,7 +21,7 @@ body{
 }
 .col {
 	background-color: white;
-	color:grey;
+	color:black;
 }
 #logo{
 	
@@ -44,13 +44,12 @@ body{
 
 .col[id^='oferta']
 {
-
 	padding: 5px;
 	margin-bottom: 5px;
 	margin-top:5px;
 	overflow: hidden;
 	min-height: 75px;
-	background-color: #e9dbff;
+	background-color: #9D8D8F;
 	border-radius: 7px 7px 7px 7px;
 	-moz-border-radius: 7px 7px 7px 7px;
 	-webkit-border-radius: 7px 7px 7px 7px;
@@ -59,7 +58,7 @@ body{
 	box-shadow: 9px 9px 0px -6px rgba(0,0,0,0.44);
 }
 .col[id^='oferta']:hover{
-	background-color: #d6e6ff; 
+	background-color: #46344E; 
 }
 #tekst{
 	margin:10px;
@@ -72,6 +71,19 @@ img{
 	margin:15px;
 }
 
+.button {
+  background-color: #17252A;
+  border: none;;
+  color: white;
+  padding: 0.4em 0.8em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 @keyframes fade { 
   	from{ opacity:0.5; }
 }
@@ -80,9 +92,6 @@ img{
   animation: fade 0.3s infinite alternate;
 
 }
-
-
-
 /*efekt pulsowania*/
 .pulse {
     animation: pulsate 1s ease-out;
@@ -91,9 +100,9 @@ img{
     opacity: 0.0
 }
 
-
 @keyframes pulsate {
     0% {transform: opacity: 0.0;}
     50% {opacity: 1.0;}
     100% {transform: opacity: 0.0;}
 }
+

@@ -1,13 +1,14 @@
 $(document).ready(function () {
 	//pętla do tworzenia listy ofert		
-			geojsonFeature.features.forEach((item,iterator)=> {console.log(iterator)
+			geojsonFeature.features.forEach((item,iterator)=> {
 				$('#oferty').append(
 							`<div id="oferta ${iterator}" class="col">
 								<img src="https://robohash.org/${iterator}" alt="...">
 								<div id="tekst ${iterator}">
-									<h4>${item.properties.description.name}</h4><br/>
+									<h4>${item.properties.description.name}</h4>
 										${item.properties.description.specification}
 								</div>
+								<button class="button">Czytaj więcej</button>
 							</div>`
 					);
 			})
@@ -19,7 +20,7 @@ $(document).ready(function () {
         lyrORTO = L.tileLayer.wms("http://mapy.geoportal.gov.pl/wss/service/img/guest/ORTO/MapServer/WMSServer", {layers: "Raster", format: 'image/png', transparent : 'true', version : '1.1.1'}),    
         lyrSozo = L.tileLayer.wms("http://mapy.geoportal.gov.pl/wss/service/img/guest/SOZO/MapServer/WMSServer", {layers: "Raster", format: 'image/png', transparent : 'true', version : '1.1.1'}),
         
-        // przypisuję do zmiennej mymap obiekt mapa z klasy map
+    // przypisuję do zmiennej mymap obiekt mapa z klasy map
         mymap = L.map('mymap', {center: [52.3289, 21.0], zoom: 10, zoomControl: false, attributionControl: false});
 
     mymap.addLayer(lyrOSM);
