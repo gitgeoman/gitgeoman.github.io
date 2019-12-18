@@ -6,7 +6,7 @@ body{
 	padding: 0px;
 }
 .container{
-	display: flex;
+
 	align-items: stretch;
 	margin:0px;
 	margin-top:5px;
@@ -24,22 +24,18 @@ body{
 	color:black;
 }
 #logo{
-	
 	text-align: center;
 	min-height: 50px;
 	display: inline-block;
-
 }
 
 #mymap{
-
-	min-height: 75px;
+	min-height: 300px;
 }
-#oferty{
 
+#oferty{
 	overflow: auto;
 	height: 80vh;
-
 }
 
 .col[id^='oferta']
@@ -97,7 +93,7 @@ img{
     animation: pulsate 1s ease-out;
     -webkit-animation: pulsate 1s ease-out;
     -webkit-animation-iteration-count: infinite; 
-    opacity: 0.0
+    opacity: 0.65
 }
 
 @keyframes pulsate {

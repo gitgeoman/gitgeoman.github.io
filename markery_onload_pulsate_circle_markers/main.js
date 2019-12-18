@@ -36,16 +36,29 @@ $(document).ready(function () {
 
     //dodaje skale
     L.control.scale({position:'bottomright', imperial:false, maxWidth:200}).addTo(mymap);
-    
 
     //dodaje dane do okna mapy z pliku geojson
  	var myLayer = L.geoJSON(geojsonFeature, 
 		{
 			pointToLayer: function (feature, latlng){
-				return L.circleMarker(latlng, feature.properties.symbol_circle);
+				return L.circleMarker(latlng, feature.properties.symbol_circle)
+				.bindPopup(
+					`<h5>${geojsonFeature.features[7].properties.description.name}</h5>
+						 ${geojsonFeature.features[7].properties.description.specification}`
+				)
+				.on('mouseover', function(){
+					let a=this.feature.properties.id-1;
+					//$(`.col[id^='oferta ${a}']`).css("background-color", "yellow");
+					$(`.col[id^='oferta ${a}']`).addClass('pulse')
+				})
+				.on('mouseout', function(){
+					let a=this.feature.properties.id-1;
+					//$(`.col[id^='oferta ${a}']`).css("background-color", "#9D8D8F");
+					$(`.col[id^='oferta ${a}']`).removeClass('pulse');
+				});
 			}
-		}
-		).addTo(mymap);
+		})
+ 	.addTo(mymap);
 
 	//pulsujące markery
  	 $( ".col[id^='oferta']")
@@ -80,4 +93,7 @@ $(document).ready(function () {
 		 	marker.closePopup();
 		 	mymap.removeLayer(marker) //usuwa ostatniego markera z mapy
 		});
+
+
+
 });
