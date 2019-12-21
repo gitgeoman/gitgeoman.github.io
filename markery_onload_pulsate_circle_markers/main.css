@@ -1,5 +1,6 @@
 
 body{
+	background-color: black;
 	margin:0px;
 	font-size: 1em;
 	text-align: justify;
@@ -23,9 +24,10 @@ body{
 	background-color: white;
 	color:black;
 }
+
 #logo{
 	text-align: center;
-	min-height: 50px;
+	height: 15vh;
 	display: inline-block;
 }
 
@@ -35,7 +37,8 @@ body{
 
 #oferty{
 	overflow: auto;
-	height: 80vh;
+	
+	max-height: 80vh;
 }
 
 .col[id^='oferta']

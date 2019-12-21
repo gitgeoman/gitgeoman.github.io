@@ -1,13 +1,25 @@
 $(document).ready(function () {
+
+
+	//popup text
+	function popupText(item,iterator){
+		let dzisiaj = new Date();
+		let text= 
+			`<div id="tekst ${iterator}">
+			<img src="https://robohash.org/${iterator}" alt="...">
+				${dzisiaj.getFullYear()}-${dzisiaj.getMonth()}-${dzisiaj.getDate()}
+				${dzisiaj.getHours()}:${dzisiaj.getMinutes()}:${dzisiaj.getSeconds()} <br/>
+				<h4>${item.properties.description.name}</h4>
+				${item.properties.description.specification}
+			</div>`
+		return text
+	};
+
 	//pętla do tworzenia listy ofert		
 			geojsonFeature.features.forEach((item,iterator)=> {
 				$('#oferty').append(
 							`<div id="oferta ${iterator}" class="col">
-								<img src="https://robohash.org/${iterator}" alt="...">
-								<div id="tekst ${iterator}">
-									<h4>${item.properties.description.name}</h4>
-										${item.properties.description.specification}
-								</div>
+									${popupText(item,iterator)}
 								<button class="button">Czytaj więcej</button>
 							</div>`
 					);
@@ -81,14 +93,10 @@ $(document).ready(function () {
 			    //treść popup
 		var dzisiaj = new Date();
 		marker
-			.bindPopup(`
-				${dzisiaj.getFullYear()}-${dzisiaj.getMonth()}-${dzisiaj.getDate()}
-				${dzisiaj.getHours()}:${dzisiaj.getMinutes()}:${dzisiaj.getSeconds()} <br/>
-				<h5>${geojsonFeature.features[str].properties.description.name}</h5>
-				${geojsonFeature.features[str].properties.description.specification}
-			`)
+			.bindPopup(
+				popupText(geojsonFeature.features[str],str))
 			.openPopup();
-	})
+		})
  	 	.mouseout(function(){
 		 	marker.closePopup();
 		 	mymap.removeLayer(marker) //usuwa ostatniego markera z mapy
